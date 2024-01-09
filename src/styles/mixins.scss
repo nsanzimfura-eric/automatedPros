@@ -1,4 +1,4 @@
-@import "variables";
+@import "./variables.scss";
 
 @mixin transition {
   transition: all 0.3s ease-out;
@@ -10,37 +10,7 @@
   background-repeat: no-repeat;
 }
 
-@mixin h3 {
-  margin-top: 16px;
-  font-family: $open-sans-semi-bold;
-  font-weight: 600;
-  font-size: (16px);
-  letter-spacing: 0.17em;
-  line-height: 1;
-  text-align: left;
-  color: $music-page-white;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-@mixin svg-interaction {
-  svg {
-    path,
-    circle,
-    rect {
-      @include transition;
-    }
-
-    &:hover {
-      path,
-      circle,
-      rect {
-        stroke: $orange;
-        fill: $orange;
-      }
-    }
-  }
-}
-
+//  media screens
 @mixin mq($size) {
   @media screen and (max-width: $size) {
     @content;
@@ -50,74 +20,6 @@
 @mixin mqh($size) {
   @media screen and (max-height: $size) {
     @content;
-  }
-}
-
-@mixin scroll-bar {
-  &::-webkit-scrollbar {
-    width: (10px / $divider);
-
-    @include mq($xls) {
-      display: none;
-    }
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: lighten($color: $gray-main-color, $amount: 1);
-
-    @include mq($xls) {
-      display: none;
-    }
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: darken($color: #262926, $amount: 20);
-    border-radius: 100px;
-
-    @include mq($xls) {
-      display: none;
-    }
-  }
-
-  /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    background: #262926;
-
-    @include mq($xls) {
-      display: none;
-    }
-  }
-}
-@mixin poppins-regular-16 {
-  font-family: $Heebo_Regular;
-  font-size: 16px;
-  color: $gray_color;
-}
-@mixin scroll-bar-hidden {
-  &::-webkit-scrollbar {
-    width: (10px / $divider);
-    display: none;
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: lighten($color: $gray-main-color, $amount: 1);
-    display: none;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: darken($color: #262926, $amount: 20);
-    border-radius: 100px;
-    display: none;
-  }
-
-  /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    background: #262926;
-    display: none;
   }
 }
 
@@ -138,18 +40,6 @@
   }
 }
 
-@mixin grid($cols, $margin) {
-  -ms-flex: 0 0 (100%/ ($cols + $margin));
-  flex: 0 0 (100%/ ($cols + $margin));
-  max-width: (100%/ ($cols + $margin));
-  margin-right: ((100% / $cols)- (100%/ ($cols + $margin)));
-  margin-top: ((100% / $cols)- (100%/ ($cols + $margin)));
-
-  @include mq($xls) {
-    margin-top: 12%;
-  }
-}
-
 @function pxToVh($element) {
   @return #{($element/1080) * 100}vh;
 }
@@ -159,144 +49,4 @@
 }
 @function pxToEm($element) {
   @return #{$element/16}em;
-}
-
-//mixin margins and paddings
-@mixin page-setting {
-  background: transparent;
-  max-width: 100vw;
-  color: $black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0;
-  padding: pxToVw(50) pxToVw(100) pxToVw(50) pxToVw(100);
-  @include mq($xls) {
-    padding-top: pxToVh(50);
-    padding-bottom: pxToVh(50);
-  }
-}
-//title pages
-@mixin title-page {
-  font-family: $sf-pro-medium;
-  font-weight: 500;
-  font-size: pxToEm(50);
-  @include mq($xlg) {
-    font-size: pxToEm(45);
-  }
-  text-align: left;
-  color: $white;
-  @include mq($xls) {
-    font-size: pxToEm(30);
-  }
-}
-@mixin margin-left-page-body {
-  margin-left: (80px * (113.07/80));
-  @include mq($lg) {
-    margin-left: 0;
-  }
-}
-@mixin max-width-body {
-  max-width: 43.489583333%;
-  @include mq($xlg) {
-    max-width: 50%;
-  }
-  @include mq($lg) {
-    max-width: 60%;
-  }
-  @include mq($md) {
-    max-width: 70%;
-  }
-  @include mq($xls) {
-    max-width: 100%;
-  }
-}
-@mixin sub-heading-fs {
-  font-family: $sf-pro-regular;
-  font-weight: normal;
-  font-size: pxToEm(21);
-  line-height: 1.3;
-  text-align: left;
-  color: $gray;
-  margin-bottom: 32px;
-  @include mq($xlg) {
-    font-size: pxToEm(16);
-  }
-}
-@mixin sub-hearders {
-  color: $white;
-  font-family: $sf-pro-medium;
-  font-weight: 500;
-  font-size: pxToEm(28);
-  text-align: left;
-  margin-bottom: 15px;
-  line-height: 1;
-  @include mq($xlg) {
-    font-size: pxToEm(22);
-  }
-  @include mq($xls) {
-    font-size: pxToEm(22);
-  }
-}
-@mixin blue-box-props {
-  max-width: pxToVw(633);
-  aspect-ratio: 1/1;
-  background: transparent;
-  background: $blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: pxToVw(87);
-  padding: pxToVw(133) pxToVw(119);
-  @include mq($lg) {
-    padding: pxToVw(80) pxToVw(100);
-    border-radius: pxToEm(36);
-  }
-  @include mq($xls) {
-    max-width: 100%;
-    padding: pxToVh(53) pxToVh(59);
-    border-radius: pxToEm(36);
-  }
-  .logo {
-    max-width: pxToVw(80.85);
-    max-height: pxToVw(77);
-    margin-bottom: pxToVh(42);
-    @include mq($xls) {
-      max-width: pxToEm(56.22);
-      max-height: pxToEm(53);
-      margin-bottom: 25px;
-    }
-  }
-  .bottom-title {
-    @include title-page;
-    text-align: center;
-    margin-bottom: 9px;
-    @include mq($lg) {
-      font-size: pxToEm(40);
-    }
-    @include mq($xls) {
-      font-size: pxToEm(40);
-      margin-bottom: 20px;
-    }
-  }
-  .bottom-sub-title {
-    font-family: $sf-pro-regular;
-    font-weight: normal;
-    font-size: pxToEm(27);
-    line-height: 1.3;
-    text-align: center;
-    color: $white;
-    @include mq($lg) {
-      font-size: pxToEm(20);
-    }
-  }
-}
-
-@mixin bgOnMd {
-  background-color: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(14px);
-  padding: 15px;
-  border-radius: 12px;
-  color: $aqua;
 }

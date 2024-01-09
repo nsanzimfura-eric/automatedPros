@@ -1,3 +1,5 @@
+//  colors
+
 $red: #ededed;
 $white: #ededed;
 $black: #171717;
@@ -6,18 +8,18 @@ $blackNew: #171717;
 $aqua: #00eaff;
 $orange: #0c0a08;
 $gray: #dbdada;
-$blue: lighten(
-  $color: $black,
-  $amount: 6,
-);
-$backgroundImage: "https://mudakikwa.s3.eu-west-2.amazonaws.com/mudakikwa.com/60765482.jpg";
-$sf-pro-light: sfProDisplayLight;
-$sf-pro-regular: sfProDisplayRegular;
-$sf-pro-medium: sfProDisplayMedium;
-$sf-pro-semi-bold: sfProDisplaySemiBold;
-$sf-pro-bold: sfProDisplayBold;
-$sf-pro-heavy: sfProDisplayHeavy;
 
+// fonts families
+
+$polisMedium: MetropolisMedium;
+$polisLight: MetropolisLight;
+$polisRegular: MetropolisRegular;
+$polisSemiBold: MetropolisSemiBold;
+$polisBold: MetropolisBold;
+$polisThin: MetropolisThin;
+$polisExtraBold: MetropolisExtraBold;
+
+//  measurements
 $sm: 480px;
 $small-device: 500px;
 $xxs: 320px;
@@ -35,5 +37,3 @@ $xd-width: 1920;
 $xd-height: 1080;
 $width-of-container: (85px / $divider);
 $menu-height: 54px;
-$gray_color: #efe9f8;
-$gray-main-color: #bfbfbf;

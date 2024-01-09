@@ -1,29 +1,34 @@
 @font-face {
-  font-family: sfProDisplayLight;
-  src: url("./fonts/AvertaCY-Light.woff2");
+  font-family: MetropolisLight;
+  src: url("../assets/fonts/Metropolis-Light.otf");
 }
 
 @font-face {
-  font-family: sfProDisplayRegular;
-  src: url("./fonts/AvertaCY-Regular.woff2");
+  font-family: MetropolisRegular;
+  src: url("../assets/fonts/Metropolis-Regular.otf");
 }
 
 @font-face {
-  font-family: sfProDisplayMedium;
-  src: url("./fonts/SFProDisplay-Medium.ttf");
+  font-family: MetropolisMedium;
+  src: url("../assets/fonts/Metropolis-Medium.otf");
 }
 
 @font-face {
-  font-family: sfProDisplaySemiBold;
-  src: url("./fonts/AvertaCY-Semibold.woff2");
+  font-family: MetropolisSemiBold;
+  src: url("../assets/fonts/Metropolis-SemiBold.otf");
 }
 
 @font-face {
-  font-family: sfProDisplayBold;
-  src: url("./fonts/AvertaCY-Bold.woff2");
+  font-family: MetropolisBold;
+  src: url("../assets/fonts/Metropolis-Bold.otf");
 }
 
 @font-face {
-  font-family: sfProDisplayHeavy;
-  src: url("./fonts/SFProDisplay-Heavy.ttf");
+  font-family: MetropolisExtraBold;
+  src: url("../assets/fonts/Metropolis-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: MetropolisThin;
+  src: url("../assets/fonts/Metropolis-Thin.otf");
 }
