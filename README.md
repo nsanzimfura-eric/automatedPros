@@ -1,30 +1,76 @@
-# React + TypeScript + Vite
+# AUTOMATED-PROS-FRONTEND-UI CHALLENGE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based replication of the [Deliver Template webpage](https://delivertemplate.webflow.io/about), incorporating animations using GSAP, Bootstrap for styling, and SCSS for styling pre-processing.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+These instructions will help you set up and run the project on your local machine.
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js and npm installed
 
-- Configure the top-level `parserOptions` property like this:
+### Installing
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. **Clone the repository:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```bash
+   git clone https://github.com/nsanzimfura-eric/automated-pros-front-end-challenge.git
+   ```
+
+2. **Navigate to the project folder:**
+
+   ```bash
+   cd automated-pros-front-end-challenge
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Running the Project:**
+
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+- Root Dir
+
+|-- src
+| |-- components
+| | |-- Header.tsx
+| | |-- Footer.tsx
+| | |-- ...etc
+| |-- styles
+| | |-- main.scss
+| |-- pages
+| | |-- About.tsx
+| | |-- ...
+| |-- App.tsx
+| |-- index.css
+| |-- index.html
+| |-- main.js
+|-- .gitignore
+|-- package.json
+|-- vite.config.js
+
+## Built With
+
+- `React` - JavaScript library for building user interfaces
+- `Vite` - Next-generation frontend tooling
+- `GSAP` - Professional-grade JavaScript animation library
+- `Bootstrap` - Front-end component library
+- `SCSS` - CSS extension language
+
+## Author
+
+- [Nsanzimfura eric](https://github.com/nsanzimfura-eric)
+
+## vAcknowledgments
+
+- The original design inspiration: [Deliver Template About page](https://delivertemplate.webflow.io/about)
+- AutomatedPros for the opportunity and assignment.
