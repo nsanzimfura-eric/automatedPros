@@ -41,12 +41,12 @@
 }
 
 @function pxToVh($element) {
-  @return #{($element/1080) * 100}vh;
+  @return #{calc($element/1080) * 100}vh;
 }
 
 @function pxToVw($element) {
-  @return #{($element/1920) * 100}vw;
+  @return #{calc($element/1920) * 100}vw;
 }
 @function pxToEm($element) {
-  @return #{$element/16}em;
+  @return #{calc($element/16)}em;
 }
