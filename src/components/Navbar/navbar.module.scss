@@ -4,10 +4,8 @@
 .navbar {
   :global {
     background-color: $light !important;
-    @include mq($lg) {
-      .container {
-        max-width: 100vw !important;
-      }
+    .container {
+      @include container;
     }
     .nav-toggleble {
       gap: 15px;

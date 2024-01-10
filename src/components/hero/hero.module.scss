@@ -1,0 +1,8 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.hero {
+  :global {
+    @include container;
+  }
+}

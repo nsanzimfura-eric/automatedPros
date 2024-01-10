@@ -73,3 +73,9 @@
     color: $light;
   }
 }
+
+@mixin container {
+  @include mq($lg) {
+    max-width: 100vw !important;
+  }
+}
