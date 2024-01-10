@@ -101,5 +101,15 @@
         }
       }
     }
+    .copyright {
+      @include p;
+      a {
+        @include transition;
+        color: $primary;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
   }
 }

@@ -1,9 +1,25 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-#about {
+.about {
   :global {
     background-color: $pale;
-    @include page;
+    .fixedLogo {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      border: 1px solid $border;
+      border-radius: 5px;
+      padding: 5px;
+      z-index: 100;
+      font-family: $polisBold;
+      color: $dark;
+      display: flex;
+      gap: 5px;
+      font-size: pxToEm(14);
+      img {
+        width: 25px;
+      }
+    }
   }
 }

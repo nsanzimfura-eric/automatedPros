@@ -30,6 +30,10 @@ export default function About() {
 
     return (
         <div className={`${styles.about} container-fluid m-0 p-0 bg-pale w-100`}>
+            <a href="https://webflow.com/" className="fixedLogo text-decoration-none">
+                <img src="/images/web.png" alt="WebFlow logo" />
+                Made in Webflow
+            </a>
             <NavbarComponent />
             <Hero />
             <AboutUs reverseColumns={reverseColumns2} data={aboutUsData} />
