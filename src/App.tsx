@@ -1,4 +1,4 @@
-import About from "./pages/About";
+import About from "./pages/About/About";
 
 function App() {
   return (

@@ -5,6 +5,7 @@
   :global {
     @include container;
     @include page;
+    padding-bottom: 50px;
     .heroIntro {
       flex-grow: 1;
       min-height: 80vh;

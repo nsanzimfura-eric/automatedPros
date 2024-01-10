@@ -5,5 +5,39 @@
   :global {
     @include page;
     @include container;
+    .wrapperBox {
+      flex-direction: row;
+      gap: 50px;
+      .image-burger,
+      .aboutBox {
+        height: calc(100% - 100px);
+        border-radius: 15px;
+        flex: 1 1 calc(50% - 20px);
+        object-fit: fill;
+      }
+      .aboutBox {
+        padding-left: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto 0;
+        @include mq($lg) {
+          justify-content: flex-start;
+          padding-left: 0;
+        }
+        h3 {
+          @include h3;
+        }
+        h2 {
+          @include h2;
+        }
+        p {
+          @include p;
+        }
+      }
+    }
+    .reverseColumns {
+      flex-direction: row-reverse;
+    }
   }
 }
