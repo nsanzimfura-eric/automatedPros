@@ -4,7 +4,10 @@
 .aboutUs {
   :global {
     @include page;
-    @include container;
+    background-color: $light;
+    .containerWrapper {
+      @include container;
+    }
     .wrapperBox {
       flex-direction: row;
       gap: 50px;
@@ -21,6 +24,7 @@
         flex-direction: column;
         justify-content: center;
         margin: auto 0;
+        border-radius: 0;
         @include mq($lg) {
           justify-content: flex-start;
           padding-left: 0;
@@ -37,7 +41,11 @@
       }
     }
     .reverseColumns {
-      flex-direction: row-reverse;
+      display: flex !important;
+      flex-direction: row-reverse !important;
+      .aboutBox {
+        padding-left: 0;
+      }
     }
   }
 }
