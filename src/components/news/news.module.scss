@@ -53,6 +53,16 @@
           gap: 24px;
           @include mq($lg) {
             width: 100%;
+            padding: 50px;
+          }
+          @include mq($md) {
+            padding: 40px;
+          }
+          @include mq($xls) {
+            padding: 30px;
+          }
+          @include mq($xms) {
+            padding: 20px;
           }
           .news {
             width: 190px;
@@ -75,6 +85,14 @@
             }
             @include mq($sm) {
               width: 130px;
+            }
+          }
+          .bottomCard {
+            @include mq($sm) {
+              flex-direction: column !important;
+              gap: 10px;
+              justify-content: flex-start !important;
+              align-items: flex-start !important;
             }
           }
           &:hover {

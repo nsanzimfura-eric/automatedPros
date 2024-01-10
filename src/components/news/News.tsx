@@ -14,7 +14,7 @@ const News = () => {
                         <a href="#news" key={id} className="singleCard flex-column align-items-start d-flex text-decoration-none">
                             <img src="/images/compa.svg" alt="CompanyLogo" className="news mt-5" />
                             <span className="text-start title ">{data.title}</span>
-                            <div className="d-flex justify-content-between align-items-center w-100 p-0 mb-5">
+                            <div className="d-flex justify-content-between bottomCard align-items-center w-100 p-0 mb-5">
                                 <img src="/images/more.png" alt="Read More" className="readMore" />
                                 <span className="text-secondary date">{data.date}</span>
                             </div>
