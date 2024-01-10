@@ -6,6 +6,7 @@
     @include page;
     background-color: $light;
     border-top: 1px solid $border;
+    min-height: fit-content !important;
     .containerWrapper {
       @include container;
       .footerIntroWrapper {
@@ -101,8 +102,132 @@
         }
       }
     }
+    .linksBoxFooter {
+      border-bottom: 1px solid $gray;
+      @include container;
+      flex-wrap: wrap;
+      gap: 50px;
+      padding: 70px 0;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include mq($lg) {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+      }
+      @include mq($md) {
+        flex-direction: column;
+      }
+      .utilities,
+      .menuBox,
+      .marksWrapper {
+        h3 {
+          @include h4;
+          margin-bottom: 30px;
+          font-size: pxToEm(20);
+          @include mq($md) {
+            font-size: pxToEm(18);
+          }
+          @include mq($xls) {
+            font-size: pxToEm(16);
+          }
+        }
+      }
+      .leftPartFooter,
+      .marksWrapper {
+        flex: 1 1 calc(50% - 25px);
+        div {
+          a {
+            @include p;
+            display: flex;
+            margin-top: 10px;
+            justify-content: flex-start;
+            @include transition;
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+        .menus {
+          gap: 40px;
+          @include mq($lg) {
+            gap: 30px;
+          }
+        }
+      }
+      .utilities,
+      .menuBox {
+        @include mq($md) {
+          flex: 1 1 calc(100% / 3 - 25px);
+        }
+      }
+      .leftPartFooter {
+        gap: 70px;
+        justify-content: space-between;
+        @include mq($lg) {
+          flex: 1 1 calc(100% / 2);
+        }
+        @include mq($md) {
+          width: 100%;
+          gap: auto;
+          justify-content: flex-start;
+        }
+      }
+      .marksWrapper {
+        @include mq($lg) {
+          flex: 1 1 calc(100% / 3);
+        }
+        .markBox {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          @include mq($lg) {
+            flex-direction: column;
+          }
+          @include mq($md) {
+            flex-direction: row;
+          }
+          @include mq($sm) {
+            flex-direction: column;
+          }
+          & > div {
+            width: calc(100% / 2 - 20px);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            @include mq($lg) {
+              width: 100%;
+            }
+            @include mq($md) {
+              width: calc(100% / 2 - 20px);
+            }
+            @include mq($sm) {
+              width: 100%;
+            }
+            img {
+              width: 78px;
+              aspect-ratio: 1/1;
+              height: auto;
+              border-radius: 20px;
+            }
+            span {
+              @include h3;
+              text-transform: none;
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
     .copyright {
+      @include container;
       @include p;
+      display: inline-block;
+      text-align: center;
+      @include mq($lg) {
+        padding-top: 20px !important;
+        padding-bottom: 40px !important;
+      }
       a {
         @include transition;
         color: $primary;
