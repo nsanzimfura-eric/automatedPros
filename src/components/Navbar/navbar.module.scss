@@ -7,6 +7,15 @@
     .container {
       @include container;
     }
+    .brand,
+    .toggler {
+      @include mq($sm) {
+        max-width: 100px;
+      }
+      @include mq($xxs) {
+        max-width: 90px !important;
+      }
+    }
     .nav-toggleble {
       gap: 15px;
       align-items: center;

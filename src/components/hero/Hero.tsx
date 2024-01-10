@@ -5,8 +5,8 @@ const Hero = () => {
 
     return (
         <div className={`${styles.hero} container d-flex flex-column`}>
-            <div className="heroIntro mt-0 d-flex flex-column flex-lg-row justify-content-between row">
-                <div className="HeroDescription-wrapper col-12 col-lg-7 d-flex justify-content-center align-items-center">
+            <div className="heroIntro mt-0 d-flex flex-column flex-lg-row justify-content-between row-lg">
+                <div className="HeroDescription-wrapper col-lg-7 d-flex justify-content-start align-items-center">
                     <div className="HeroDescription d-flex flex-column">
                         <h3>ABOUT DELIVER X</h3>
                         <h1>We are here to help <br /> amazing restaurants <br /> get great customers</h1>
@@ -19,7 +19,7 @@ const Hero = () => {
                         </p>
                     </div>
                 </div>
-                <div className="col-12 p-0 col-lg-5 imagesBox d-flex position-relative">
+                <div className="p-0 col-lg-5 imagesBox d-flex position-relative">
                     <img src="/images/burger-deliverer.png" alt="Bg Burger" className="bgBurger position-absolute" />
                     <div className="imgLeft m-0 d-flex flex-column justify-content-center">
                         <img src="/images/burger.png" alt="Burger" className="img-fluid burger" />

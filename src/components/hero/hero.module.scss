@@ -8,14 +8,33 @@
     .heroIntro {
       flex-grow: 1;
       min-height: 80vh;
+      @include mq(990px) {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center;
+        padding-top: 40px;
+        .HeroDescription-wrapper {
+          width: 100%;
+        }
+      }
     }
     .HeroDescription {
+      width: 100%;
       gap: 20px;
       h3 {
         @include h3;
+        @include mq(990px) {
+          display: flex;
+          justify-content: center;
+        }
       }
       h1 {
         @include h1;
+        @include mq(990px) {
+          display: flex;
+          justify-content: center;
+        }
       }
       p {
         @include p;
@@ -23,6 +42,13 @@
     }
 
     .imagesBox {
+      overflow: hidden;
+      @include mq(990px) {
+        min-height: $xls;
+      }
+      @include mq($xls) {
+        min-height: $xms;
+      }
       .bgBurger {
         top: 50%;
         left: 50%;
@@ -34,6 +60,16 @@
         height: auto;
         border-radius: 50%;
         z-index: 0;
+        overflow: hidden;
+        @include mq(990px) {
+          width: 600px;
+        }
+        @include mq($md) {
+          width: 500px;
+        }
+        @include mq($xls) {
+          width: 100%;
+        }
       }
       .imgLeft,
       .imgRight {
@@ -44,11 +80,33 @@
           border-radius: 10px;
           overflow: hidden;
           transform: translateY(25vh);
+          @include mq(990px) {
+            max-width: 200px;
+            margin-left: 50px;
+            transform: translateY(200%);
+          }
+          @include mq($xls) {
+            margin-left: 20px;
+            max-width: 150px;
+          }
+          @include mq($sm) {
+            max-width: 100px;
+          }
         }
         .burger {
           max-width: 70%;
           border-radius: 15px;
           transform: translateY(5vh);
+          @include mq(990px) {
+            max-width: 250px;
+            transform: translateY(20%);
+          }
+          @include mq($xls) {
+            max-width: 200px;
+          }
+          @include mq($sm) {
+            max-width: 150px;
+          }
         }
       }
     }

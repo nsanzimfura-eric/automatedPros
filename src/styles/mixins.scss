@@ -77,6 +77,8 @@
 @mixin container {
   @include mq($lg) {
     max-width: 100vw !important;
+    padding: 0 24px !important;
+    overflow-x: hidden !important;
   }
 }
 @mixin h1 {
@@ -145,6 +147,9 @@
   font-family: $polisMedium;
   font-size: pxToEm(18);
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include mq($md) {
     font-size: pxToEm(16);
   }
