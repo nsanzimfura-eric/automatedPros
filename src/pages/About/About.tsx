@@ -6,6 +6,8 @@ import styles from "./about.module.scss";
 import { aboutUsData, missionData } from "./demoData"
 import useWindowSize from "../../hooks/useWindowSize";
 import { mediaDevices } from "../../utils/constants";
+import Journey from "../../components/journey/Journey";
+import Partners from "../../components/partners/partners";
 
 export default function About() {
     const [reverseColumns, setReverseColumns] = useState(true);
@@ -30,6 +32,8 @@ export default function About() {
             <Hero />
             <AboutUs reverseColumns={reverseColumns2} data={aboutUsData} />
             <AboutUs reverseColumns={reverseColumns} data={missionData} />
+            <Journey />
+            <Partners />
         </div>
     )
 }

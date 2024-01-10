@@ -1,0 +1,81 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.journey {
+  :global {
+    @include page;
+    @include container;
+    gap: 50px;
+    @include mq($lg) {
+      align-items: center;
+    }
+    .introJourney,
+    .journeyBox {
+      height: calc(100% - 100px);
+      flex: 1 1 calc(50% - 20px);
+      @include mq($lg) {
+        width: 80%;
+        height: fit-content;
+      }
+      @include mq($lg) {
+        width: 80%;
+      }
+      @include mq($md) {
+        width: 90%;
+      }
+      @include mq($xls) {
+        width: 100%;
+      }
+    }
+    .introJourney {
+      align-items: flex-start;
+      gap: 10px;
+      h2 {
+        @include h3;
+      }
+      h3 {
+        @include h2;
+      }
+      p {
+        @include p;
+      }
+      .btnDownload {
+        @include appBtn;
+        background-color: $primary;
+        &:hover {
+          background-color: darken($color: $primary, $amount: 15);
+          border-color: transparent;
+        }
+      }
+    }
+    .journeyBox {
+      overflow-y: auto;
+      @include hideScroll;
+      height: 600px;
+      @include mq($lg) {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .singleJourney {
+        border-radius: 20px;
+        margin: 20px 0;
+        background-color: $light;
+        padding: 30px;
+        width: 95%;
+        box-shadow: 3px 3px 3px $gray, -3px 3px 3px $gray;
+        gap: 20px;
+        h4 {
+          @include h3;
+        }
+        h3 {
+          @include h4;
+        }
+        p {
+          @include p;
+        }
+      }
+    }
+  }
+}

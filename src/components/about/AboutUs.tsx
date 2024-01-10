@@ -15,7 +15,7 @@ const AboutUs = (props: Prop) => {
 
     return (
         <div className={`${styles.aboutUs} w-100 p-0 m-0 d-flex pt-5`}>
-            <div className="mt-5 pt-5 container containerWrapper">
+            <div className="my-5 py-5 container containerWrapper">
                 <div className={`wrapperBox d-flex flex-column-reverse  flex-lg-row m-0 ${reverseColumns ? "reverseColumns" : ""}`}>
                     <img src={data.image} alt="Burger APP" className="image-burger" />
                     <div className="aboutBox">

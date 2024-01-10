@@ -1,0 +1,25 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.Partners {
+  :global {
+    @include page;
+    @include container;
+    background-color: $light;
+    .containerWrapper {
+      @include container;
+      @include mq($lg) {
+        width: 80%;
+      }
+      @include mq($lg) {
+        width: 80%;
+      }
+      @include mq($md) {
+        width: 90%;
+      }
+      @include mq($xls) {
+        width: 100%;
+      }
+    }
+  }
+}
