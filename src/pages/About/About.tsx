@@ -8,6 +8,7 @@ import useWindowSize from "../../hooks/useWindowSize";
 import { mediaDevices } from "../../utils/constants";
 import Journey from "../../components/journey/Journey";
 import Partners from "../../components/partners/partners";
+import News from "../../components/news/News";
 
 export default function About() {
     const [reverseColumns, setReverseColumns] = useState(true);
@@ -34,6 +35,7 @@ export default function About() {
             <AboutUs reverseColumns={reverseColumns} data={missionData} />
             <Journey />
             <Partners />
+            <News />
         </div>
     )
 }

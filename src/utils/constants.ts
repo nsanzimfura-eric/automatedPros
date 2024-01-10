@@ -8,7 +8,7 @@ const mediaDevices = {
   xlsh: 500,
   xms: 375,
   md: 780,
-  lg: 1024,
+  lg: 993,
   xlg: 1440,
   xxlg: 5000,
   headerVH: 100,

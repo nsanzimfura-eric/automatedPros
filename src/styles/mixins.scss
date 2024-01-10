@@ -186,3 +186,7 @@
   padding: 50px 0;
   min-height: 100vh;
 }
+
+@mixin shadow {
+  box-shadow: 3px 3px 3px $gray, -3px 3px 3px $gray;
+}

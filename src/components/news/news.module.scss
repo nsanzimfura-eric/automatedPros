@@ -1,0 +1,48 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.news {
+  :global {
+    @include page;
+    @include container;
+    background-color: $light;
+    .containerWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include container;
+      @include mq($lg) {
+        width: 80%;
+      }
+      @include mq($lg) {
+        width: 80%;
+      }
+      @include mq($md) {
+        width: 90%;
+      }
+      @include mq($xls) {
+        width: 100%;
+      }
+      .introJourney {
+        width: 60%;
+        @include mq($xlg) {
+          width: 70%;
+        }
+        @include mq($lg) {
+          width: 100%;
+        }
+
+        gap: 10px;
+        h2 {
+          @include h3;
+        }
+        h3 {
+          @include h2;
+        }
+      }
+      .partnerBox {
+        display: flex;
+      }
+    }
+  }
+}
