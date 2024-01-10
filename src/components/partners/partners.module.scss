@@ -7,6 +7,9 @@
     @include container;
     background-color: $light;
     .containerWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       @include container;
       @include mq($lg) {
         width: 80%;
@@ -19,6 +22,69 @@
       }
       @include mq($xls) {
         width: 100%;
+      }
+      .introJourney {
+        width: 60%;
+        @include mq($xlg) {
+          width: 70%;
+        }
+        @include mq($lg) {
+          width: 100%;
+        }
+
+        gap: 10px;
+        h2 {
+          @include h3;
+        }
+        h3 {
+          @include h2;
+        }
+        p {
+          @include p;
+        }
+      }
+      .partnerBox {
+        gap: 50px;
+        @include mq($lg) {
+          gap: 30px;
+          align-items: center;
+        }
+        .singlePartner {
+          gap: 16px;
+          flex: 1 1 calc(100% / 3 - 100px);
+          @include mq($lg) {
+            width: 50%;
+          }
+          @include mq($md) {
+            width: 60%;
+          }
+          @include mq($xls) {
+            width: 70%;
+          }
+          @include mq($sm) {
+            width: 85%;
+          }
+          @include mq(320px) {
+            width: 100%;
+          }
+          .partner {
+            width: 218px;
+            aspect-ratio: 218/170;
+            height: auto;
+            @include mq($md) {
+              width: 180px;
+            }
+            @include mq($sm) {
+              width: 150px;
+            }
+          }
+          h3 {
+            @include h22;
+          }
+          p {
+            @include p;
+          }
+        }
       }
     }
   }
