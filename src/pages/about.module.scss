@@ -4,5 +4,6 @@
 #about {
   :global {
     background-color: $pale;
+    @include page;
   }
 }

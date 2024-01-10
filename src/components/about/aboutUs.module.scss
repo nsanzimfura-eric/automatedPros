@@ -1,0 +1,9 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.aboutUs {
+  :global {
+    @include page;
+    @include container;
+  }
+}

@@ -19,7 +19,7 @@ const NavbarComponent = () => {
                 <Navbar.Brand href="#home" ><img src="/images/logo.svg" className="me-auto img-fluid" alt="Logo" /></Navbar.Brand>
                 <NavLinks className="justify-content-end d-none d-lg-flex" />
                 <div className="d-flex ms-auto align-items-center end-box">
-                    <Nav.Link href="#home" className="link">Cart(0)</Nav.Link>
+                    <Nav.Link href="#home" className="link ms-0 ms-lg-2">Cart(0)</Nav.Link>
                     <Button className="btn btnDownload">Download app</Button>
                     <Button className="btn btnRegister">Register</Button>
                     <Navbar.Toggle className="text-dark" aria-controls="basic-navbar-nav" onClick={handleToggleLinks} />

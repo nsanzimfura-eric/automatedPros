@@ -24,7 +24,6 @@ const NavLinks = (props: Props) => {
                     <NavDropdown.Item href="#home" className="link">page 3</NavDropdown.Item>
 
                 </NavDropdown>
-
             </Nav>
         </Navbar.Collapse>
     )
