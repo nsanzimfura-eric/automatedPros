@@ -4,34 +4,61 @@
 .navbar {
   :global {
     background-color: $light !important;
+    @include mq($lg) {
+      .container {
+        max-width: 100vw !important;
+      }
+    }
     .nav-toggleble {
       gap: 15px;
       align-items: center;
-      .link,
-      .dropdown-toggle {
-        color: $dark;
-        @include transition;
-        font-size: pxToEm(16);
-        font-family: $polisMedium;
-        &:hover {
-          color: $primary;
-        }
-      }
       .active {
         color: $primary !important;
       }
-      .btnDownload {
-        color: $dark;
-        @include appBtn;
-        background-color: $light;
-        border-color: $gray;
-        &:hover {
-          background-color: $primary;
+    }
+    .link,
+    .dropdown-toggle {
+      color: $dark;
+      @include transition;
+      font-size: pxToEm(16);
+      font-family: $polisMedium;
+      &:hover {
+        color: $primary;
+      }
+    }
+    .btnDownload {
+      color: $dark;
+      @include appBtn;
+      background-color: $light;
+      border-color: $gray;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+    .btnRegister {
+      @include appBtn;
+      background-color: $primary;
+    }
+    .end-box {
+      gap: 20px;
+      .btn {
+        @include mq($md) {
+          display: none;
         }
       }
-      .btnRegister {
-        @include appBtn;
-        background-color: $primary;
+    }
+    .sm-devices-links {
+      width: 100vw;
+      min-height: calc(100vh - 100px);
+    }
+    .setlinksOnSm {
+      padding-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .link {
+        font-size: pxToEm(32);
       }
     }
   }

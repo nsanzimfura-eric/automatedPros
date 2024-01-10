@@ -1,32 +1,30 @@
+import { useState } from "react";
+import NavLinks from "./NavLinks";
 import styles from "./navbar.module.scss";
-import { Container, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+import useWindowSize from "../../hooks/useWindowSize";
+import { mediaDevices } from "../../utils/constants";
 
 const NavbarComponent = () => {
+    const [showLinks, setShowLinks] = useState(false);
+    const { width } = useWindowSize();
+
+    const handleToggleLinks = () => {
+        setShowLinks(!showLinks);
+    }
 
     return (
-        <Navbar className={`${styles.navbar} py-4 container-fluid m-0`}>
-            <Container className="bg-none p-0">
+        <Navbar expand="lg" className={`${styles.navbar}  py-4 container-fluid m-0`}>
+            <Container className="bg-none p-5 p-lg-0">
                 <Navbar.Brand href="#home" ><img src="/images/logo.svg" className="me-auto img-fluid" alt="Logo" /></Navbar.Brand>
-                <Navbar.Toggle className="" aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-                    <Nav className="nav-toggleble d-flex">
-                        <Nav.Link href="#home" className="link">Home</Nav.Link>
-                        <Nav.Link href="#home" className="link active">About</Nav.Link>
-                        <Nav.Link href="#home" className="link">Pricing</Nav.Link>
-                        <Nav.Link href="#home" className="link">About</Nav.Link>
-                        <NavDropdown title="Pages" className="link" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#home" className="link">page 1</NavDropdown.Item>
-                            <NavDropdown.Item href="#home" className="link">
-                                page 2
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#home" className="link">page 3</NavDropdown.Item>
-
-                        </NavDropdown>
-                        <Nav.Link href="#home" className="link">Cart(0)</Nav.Link>
-                        <Button className="btn btnDownload">Download app</Button>
-                        <Button className="btn btnRegister">Register</Button>
-                    </Nav>
-                </Navbar.Collapse>
+                <NavLinks className="justify-content-end d-none d-lg-flex" />
+                <div className="d-flex ms-auto align-items-center end-box">
+                    <Nav.Link href="#home" className="link">Cart(0)</Nav.Link>
+                    <Button className="btn btnDownload">Download app</Button>
+                    <Button className="btn btnRegister">Register</Button>
+                    <Navbar.Toggle className="text-dark" aria-controls="basic-navbar-nav" onClick={handleToggleLinks} />
+                </div>
+                {showLinks && width <= mediaDevices.lg && <NavLinks className="d-flex d-lg-none p-0" setlinksOnSm="setlinksOnSm" />}
             </Container>
         </Navbar>
     )
