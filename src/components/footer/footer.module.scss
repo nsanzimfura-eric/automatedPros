@@ -146,6 +146,18 @@
               color: $primary;
             }
           }
+          .browse {
+            @include h3;
+            text-transform: none !important;
+            padding-bottom: 6px;
+            border-bottom: 2px solid $primary;
+            @include transition;
+            width: fit-content;
+            &:hover {
+              color: $dark;
+              border-color: $dark;
+            }
+          }
         }
         .menus {
           gap: 40px;
@@ -161,9 +173,9 @@
         }
       }
       .leftPartFooter {
-        gap: 70px;
-        justify-content: space-between;
+        gap: 100px;
         @include mq($lg) {
+          gap: 70px;
           flex: 1 1 calc(100% / 2);
         }
         @include mq($md) {
@@ -171,11 +183,12 @@
           gap: auto;
           justify-content: flex-start;
         }
+        @include mq($sm) {
+          flex-direction: column;
+        }
       }
       .marksWrapper {
-        @include mq($lg) {
-          flex: 1 1 calc(100% / 3);
-        }
+        flex: 1 1 calc(100% / 3);
         .markBox {
           display: flex;
           flex-wrap: wrap;
@@ -219,6 +232,7 @@
         }
       }
     }
+
     .copyright {
       @include container;
       @include p;
