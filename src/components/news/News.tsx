@@ -11,11 +11,11 @@ const News = () => {
                 </div>
                 <div className="partnerBox w-100 d-flex flex-column flex-lg-row py-3 py-lg-5" id="news">
                     {newsData.map((data, id) => (
-                        <a href="#news" key={id} className="singlePartner flex-column align-items-center d-flex">
-                            <img src="/images/compa.svg" alt="Partner" className="news" />
-                            <span className="text-center title">{data.title}</span>
-                            <div className="d-flex justify-content-between w-100">
-                                <img src="/images/read.png" alt="Read More" className="readMore" />
+                        <a href="#news" key={id} className="singleCard flex-column align-items-start d-flex text-decoration-none">
+                            <img src="/images/compa.svg" alt="CompanyLogo" className="news mt-5" />
+                            <span className="text-start title ">{data.title}</span>
+                            <div className="d-flex justify-content-between align-items-center w-100 p-0 mb-5">
+                                <img src="/images/more.png" alt="Read More" className="readMore" />
                                 <span className="text-secondary date">{data.date}</span>
                             </div>
                         </a>

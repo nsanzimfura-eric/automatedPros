@@ -161,6 +161,7 @@
   color: $dark;
   font-family: $polisBold;
   font-size: pxToEm(28);
+  line-height: 1.3;
   @include mq($xls) {
     font-size: pxToEm(24);
   }

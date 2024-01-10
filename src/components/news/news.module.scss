@@ -5,7 +5,6 @@
   :global {
     @include page;
     @include container;
-    background-color: $light;
     .containerWrapper {
       display: flex;
       flex-direction: column;
@@ -42,6 +41,49 @@
       }
       .partnerBox {
         display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        .singleCard {
+          @include transition;
+          @include shadow;
+          padding: 4%;
+          background-color: $light;
+          border-radius: 20px;
+          width: calc(100% / 2 - 15px);
+          gap: 24px;
+          @include mq($lg) {
+            width: 100%;
+          }
+          .news {
+            width: 190px;
+            aspect-ratio: 190/28;
+            height: auto;
+          }
+          .title {
+            @include h22;
+            text-decoration: none;
+          }
+          .date {
+            @include p;
+          }
+          .readMore {
+            width: 170px;
+            aspect-ratio: 190/28;
+            height: auto;
+            @include mq($md) {
+              width: 150px;
+            }
+            @include mq($sm) {
+              width: 130px;
+            }
+          }
+          &:hover {
+            transform: translateY(-5px);
+            & > div img {
+              transform: translateX(-3px);
+            }
+          }
+        }
       }
     }
   }
