@@ -1,0 +1,38 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.navbar {
+  :global {
+    background-color: $light !important;
+    .nav-toggleble {
+      gap: 15px;
+      align-items: center;
+      .link,
+      .dropdown-toggle {
+        color: $dark;
+        @include transition;
+        font-size: pxToEm(16);
+        font-family: $polisMedium;
+        &:hover {
+          color: $primary;
+        }
+      }
+      .active {
+        color: $primary !important;
+      }
+      .btnDownload {
+        color: $dark;
+        @include appBtn;
+        background-color: $light;
+        border-color: $gray;
+        &:hover {
+          background-color: $primary;
+        }
+      }
+      .btnRegister {
+        @include appBtn;
+        background-color: $primary;
+      }
+    }
+  }
+}

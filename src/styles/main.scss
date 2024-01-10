@@ -2,3 +2,17 @@
 @import "./mixins.scss";
 @import "./settings.scss";
 @import "node_modules/bootstrap/scss/bootstrap";
+
+body,
+#root {
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: smooth;
+  background-color: $pale;
+  width: 100vw;
+  min-height: 100vh;
+}
+* {
+  box-sizing: border-box;
+  font-family: $polisRegular;
+}

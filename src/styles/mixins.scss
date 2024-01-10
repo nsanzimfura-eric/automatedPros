@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 @mixin transition {
-  transition: all 0.3s ease-out;
+  transition: all 0.4s ease-in-out;
 }
 
 @mixin background-img {
@@ -49,4 +49,27 @@
 }
 @function pxToEm($element) {
   @return #{calc($element/16)}em;
+}
+
+@mixin appBtn {
+  padding: pxToEm(20) pxToEm(26);
+  font-size: pxToEm(16);
+  border: 1px solid $light;
+  border-radius: 12px;
+  @include transition;
+  font-family: $polisSemiBold;
+  @include mq($xlg) {
+    padding: pxToEm(18) pxToEm(24);
+  }
+  @include mq($lg) {
+    padding: pxToEm(16) pxToEm(20);
+  }
+  @include mq($md) {
+    padding: pxToEm(15) pxToEm(18);
+    font-size: pxToEm(14);
+  }
+  &:hover {
+    background-color: darken($color: $primary, $amount: 20);
+    color: $light;
+  }
 }

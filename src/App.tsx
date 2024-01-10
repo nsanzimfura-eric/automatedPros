@@ -1,9 +1,9 @@
+import NavbarComponent from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="container">
-      <h1>Hello Bootstrap!</h1>
-      <button className="btn btn-primary">Click me</button>
+    <div className="container-fluid m-0 p-0 bg-pale w-100" id="home">
+      <NavbarComponent />
     </div>
   );
 }

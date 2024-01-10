@@ -1,10 +1,11 @@
 //  colors
 
-$dark: #ff5634;
+$primary: #ff5634;
 $secondary: #656565;
 $dark: #121212;
 $light: #ffffff;
 $pale: #fafafa;
+$gray: #ededed;
 // effects colors
 $success: #00ff55;
 $warning: #f7e701;
@@ -12,13 +13,13 @@ $error: #ff0000;
 
 // fonts families
 
-$polisMedium: MetropolisMedium;
-$polisLight: MetropolisLight;
-$polisRegular: MetropolisRegular;
-$polisSemiBold: MetropolisSemiBold;
-$polisBold: MetropolisBold;
-$polisThin: MetropolisThin;
-$polisExtraBold: MetropolisExtraBold;
+$polisMedium: MetropolisMedium, "sans-serif";
+$polisLight: MetropolisLight, "sans-serif";
+$polisRegular: MetropolisRegular, "sans-serif";
+$polisSemiBold: MetropolisSemiBold, "sans-serif";
+$polisBold: MetropolisBold, "sans-serif";
+$polisThin: MetropolisThin, "sans-serif";
+$polisExtraBold: MetropolisExtraBold, "sans-serif";
 
 //  measurements
 $sm: 480px;
