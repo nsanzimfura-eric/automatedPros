@@ -55,7 +55,7 @@
   padding: pxToEm(20) pxToEm(26);
   font-size: pxToEm(16);
   border: 1px solid $light;
-  border-radius: 12px;
+  border-radius: 15px;
   @include transition;
   font-family: $polisSemiBold;
   @include mq($xlg) {

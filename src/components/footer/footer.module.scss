@@ -1,0 +1,105 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.footer {
+  :global {
+    @include page;
+    background-color: $light;
+    border-top: 1px solid $border;
+    .containerWrapper {
+      @include container;
+      .footerIntroWrapper {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $border;
+        justify-content: space-between;
+        gap: 50px;
+        @include mq($xlg) {
+          gap: 40px;
+        }
+        @include mq($lg) {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+        .footerIntro,
+        .btns {
+          flex: 1 1 45%;
+          @include mq($lg) {
+            width: 100%;
+          }
+        }
+
+        .footerIntro {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          .FooterLogo {
+            width: 200px;
+            aspect-ratio: 200/60;
+            height: auto;
+            @include mq($lg) {
+              width: 180px;
+            }
+            @include mq($xls) {
+              width: 150px;
+            }
+          }
+          p {
+            @include p;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+        }
+        .btns {
+          flex-grow: 0;
+          gap: 20px;
+          justify-content: flex-end;
+          @include mq(1200px) {
+            gap: 10px;
+          }
+          @include mq($lg) {
+            justify-content: flex-start;
+            gap: 20px;
+          }
+          @include mq($xls) {
+            flex-direction: column;
+            width: 100%;
+          }
+          .btnFooter {
+            @include appBtn;
+            background-color: $primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            @include mq(1200px) {
+              font-size: 13px;
+              gap: 3px;
+              padding: auto 10px;
+            }
+            @include mq($lg) {
+              @include appBtn;
+            }
+            @include mq($xls) {
+              width: 100%;
+            }
+            img {
+              width: 20px;
+              aspect-ratio: 20/24;
+              height: auto;
+            }
+          }
+          .btnFooter:last-child {
+            img {
+              width: 31px;
+              aspect-ratio: 31/24;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

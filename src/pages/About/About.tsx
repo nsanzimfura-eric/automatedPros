@@ -9,6 +9,7 @@ import { mediaDevices } from "../../utils/constants";
 import Journey from "../../components/journey/Journey";
 import Partners from "../../components/partners/partners";
 import News from "../../components/news/News";
+import Footer from "../../components/footer/Footer";
 
 export default function About() {
     const [reverseColumns, setReverseColumns] = useState(true);
@@ -36,6 +37,7 @@ export default function About() {
             <Journey />
             <Partners />
             <News />
+            <Footer />
         </div>
     )
 }
