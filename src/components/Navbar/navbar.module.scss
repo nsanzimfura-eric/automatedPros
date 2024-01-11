@@ -4,6 +4,12 @@
 .navbar {
   :global {
     background-color: $light !important;
+    padding: 0;
+    width: 100%;
+    .navbarWrapper {
+      background-color: $light !important;
+      margin: 0;
+    }
     .container {
       @include container;
     }

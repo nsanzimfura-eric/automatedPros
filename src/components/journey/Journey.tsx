@@ -1,8 +1,26 @@
+import { useEffect, useRef } from "react";
+import { gsap, Power1 } from 'gsap';
 import styles from "./journey.module.scss";
 import { journeyData } from "./demoData";
 import { Button } from "react-bootstrap";
 
+
 const Journey = () => {
+    const timeline = gsap.timeline();
+    const easeInOut = Power1.easeOut;
+
+    const refImages = useRef<HTMLImageElement | null>(null)
+
+    useEffect(() => {
+
+        timeline.fromTo(refImages.current, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 1, ease: easeInOut });
+
+        return () => {
+            timeline.kill();
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <div className={`${styles.journey} container d-flex flex-column flex-lg-row mt-5 py-5`}>
             <div className="introJourney d-flex flex-column">

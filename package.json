@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-headroom": "^3.2.3",
     "bootstrap": "^5.3.2",
     "gsap": "^3.12.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.2",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-headroom": "^3.2.1"
   },
   "devDependencies": {
     "@types/node": "^20.10.8",
