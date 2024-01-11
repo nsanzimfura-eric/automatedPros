@@ -42,18 +42,18 @@ These instructions will help you set up and run the project on your local machin
 
 |-- src
 | |-- components
-| | |-- Header.tsx
-| | |-- Footer.tsx
+| | |-- Navbar
+| | |-- Footer
 | | |-- ...etc
 | |-- styles
 | | |-- main.scss
 | |-- pages
-| | |-- About.tsx
-| | |-- ...
+| | |-- About
+| | |-- ...etc
 | |-- App.tsx
 | |-- index.css
 | |-- index.html
-| |-- main.js
+| |-- main.tsx
 |-- .gitignore
 |-- package.json
 |-- vite.config.js
