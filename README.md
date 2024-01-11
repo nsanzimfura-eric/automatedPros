@@ -38,7 +38,6 @@ These instructions will help you set up and run the project on your local machin
 
 ## Project Structure
 
-- Root Dir
 ![image](https://github.com/nsanzimfura-eric/automated-pros-front-end-challenge/assets/91186046/1d8ee53b-9f3a-42b0-a778-ee9fd9ee08d6)
 ![image](https://github.com/nsanzimfura-eric/automated-pros-front-end-challenge/assets/91186046/e4fde838-05ad-4002-93f9-81b44c779d44)
 
