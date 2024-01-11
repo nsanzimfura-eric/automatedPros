@@ -9,15 +9,26 @@ const Journey = () => {
     const timeline = gsap.timeline();
     const easeInOut = Power1.easeOut;
 
-    const refImages = useRef<HTMLImageElement | null>(null)
+    const refDivsJourney = useRef<(HTMLDivElement | null)[]>([])
 
     useEffect(() => {
+        if (refDivsJourney.current) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        timeline.fromTo([...refDivsJourney.current], { scale: .5 }, { scale: 1, duration: 1, ease: easeInOut });
 
-        timeline.fromTo(refImages.current, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 1, ease: easeInOut });
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.5 });
 
-        return () => {
-            timeline.kill();
-        };
+            refDivsJourney.current.forEach((El) => {
+                observer.observe(El as HTMLDivElement);
+
+            })
+            return () => observer.disconnect();
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -32,7 +43,7 @@ const Journey = () => {
             </div>
             <div className="journeyBox">
                 {journeyData.map((journeyData, id) => (
-                    <div key={id} className="singleJourney d-flex flex-column p-5">
+                    <div key={id} className="singleJourney d-flex flex-column p-5" ref={el => (refDivsJourney.current[id] = el)}>
                         <h4>{journeyData.year}</h4>
                         <h3>{journeyData.title}</h3>
                         <p>{journeyData.details}</p>
